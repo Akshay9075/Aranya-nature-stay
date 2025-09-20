@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your stay at Aranya Nature Stay - Reserve your nature retreat with our easy booking system">
+    <meta name="keywords" content="Aranya, nature stay, eco resort, booking, reservation, nature retreat">
+    <meta name="author" content="Aranya Nature Stay">
+    <title>Book Your Stay - Aranya Nature Stay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c5e1a;
+            --secondary: #a38b5b;
+            --light: #f5f5f5;
+            --dark: #1a1a1a;
+            --accent: #8e7cc3;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--primary);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background: #3a7a23;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: #b89d69;
+        }
+        
+        .btn-disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .btn-disabled:hover {
+            background: #ccc;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.40);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-left: 10px;
+        }
+        
+        .logo-subtext {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #d17910;
+            display: block;
+            margin-top: -5px;
+        }
+        
+        .nav-menu {
+            display: flex;
+        }
+        
+        .nav-menu li {
+            margin: 0 12px;
+        }
+        
+        .nav-menu a {
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 15px;
+            position: relative;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Page Header */
+        .page-header {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/room2.jpeg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Booking Process */
+        .booking-process {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .process-step.active .step-number {
+            background: var(--primary);
+            color: #fff;
+        }
+        
+        .process-step.completed .step-number {
+            background: var(--secondary);
+            color: #fff;
+        }
+        
+        .step-text {
+            font-weight: 600;
+            color: #999;
+            transition: var(--transition);
+        }
+        
+        .process-step.active .step-text,
+        .process-step.completed .step-text {
+            color: var(--primary);
+        }
+        
+        /* Booking Form */
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 40px;
+        }
+        
+        .booking-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-section {
+            margin-bottom: 40px;
+        }
+        
+        .form-section h3 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(44, 94, 26, 0.1);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        /* Room Selection */
+        .room-options {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .room-option {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .room-option:hover {
+            border-color: var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .room-option.selected {
+            border-color: var(--primary);
+            background: rgba(44, 94, 26, 0.05);
+        }
+        
+        .room-image {
+            width: 120px;
+            height: 100px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .room-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .room-details {
+            flex: 1;
+        }
+        
+        .room-details h4 {
+            margin-bottom: 5px;
+        }
+        
+        .room-price {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        
+        .room-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .room-feature {
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .room-feature i {
+            color: var(--primary);
+        }
+        
+        /* Booking Summary */
+        .booking-summary {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        .summary-title {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .summary-details {
+            margin-bottom: 20px;
+        }
+        
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .summary-item.total {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .summary-note {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        /* Payment Options */
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .payment-option {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .payment-option:hover,
+        .payment-option.selected {
+            border-color: var(--primary);
+            background: rgba(44, 94, 26, 0.05);
+        }
+        
+        .payment-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+        
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            transition: var(--transition);
+            color: #ccc;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .booking-summary {
+                position: static;
+                margin-top: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background: #fff;
+                flex-direction: column;
+                padding: 100px 20px 0;
+                transition: var(--transition);
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .room-option {
+                flex-direction: column;
+            }
+            
+            .room-image {
+                width: 100%;
+                height: 150px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .form-actions .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Form Steps */
+        .form-step {
+            display: none;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        .floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10000;
+}
+
+.contact-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.call-btn {
+    background: var(--primary); /* Green shade or your primary color */
+}
+
+.whatsapp-btn {
+    background: #25d366; /* WhatsApp green */
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+    <!-- Logo Image -->
+    <img src="image/aranya1.png" alt="Aranya Nature Stay Logo" style="height:100px; width:auto;opacity: 2;">
+    
+    <!-- Logo Text (Optional) -->
+  <!--   <div class="logo-text">
+        Aranya <span class="logo-subtext">NATURE STAY</span>
+    </div> -->
+</a>
+            
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" style="color: black;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="rooms.html">Our Rooms</a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="booking.html" class="active">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Your Stay</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="booking.html">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking">
+        <div class="container">
+            <div class="section-title">
+                <h2>Reserve Your Nature Retreat</h2>
+                <p>Fill out the form below to book your stay at Aranya Nature Stay</p>
+            </div>
+            
+            <!-- Booking Process Steps -->
+          <!--   <div class="booking-process">
+                <div class="process-steps">
+                    <div class="process-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Dates & Guests</div>
+                    </div>
+                    <div class="process-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Select Room</div>
+                    </div>
+                    <div class="process-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Your Details</div>
+                    </div>
+                    <div class="process-step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-text">Payment</div>
+                    </div>
+                </div>
+            </div> -->
+            
+            <div class="booking-container col-12">
+                <!-- Booking Form -->
+                <div class="booking-form">
+                  <!-- Step 1: Dates & Guests -->
+<div class="form-step active" id="step-1">
+    <form id="bookingForm">
+        <div class="form-section">
+            <h3>When would you like to stay?</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Enter Your Name </label>
+                    <input type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Enter Mobile Number</label>
+                    <input type="number" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Enter Your Email</label>
+                    <input type="email" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="checkin">Check-in Date</label>
+                    <input type="date" id="checkin" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout">Check-out Date</label>
+                    <input type="date" id="checkout" class="form-control" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Who's staying?</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="adults">Adults</label>
+                    <select id="adults" class="form-control" required>
+                        <option value="1">1 Adult</option>
+                        <option value="2" selected>2 Adults</option>
+                        <option value="3">3 Adults</option>
+                        <option value="4">4 Adults</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="children">Children</label>
+                    <select id="children" class="form-control">
+                        <option value="0" selected>No Children</option>
+                        <option value="1">1 Child</option>
+                        <option value="2">2 Children</option>
+                        <option value="3">3 Children</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <div></div>
+            <button type="submit" class="btn btn-success">Book</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+        e.preventDefault(); // Form submit होऊ देऊ नको
+        alert("✅ Thanks! Your booking request is submitted."); // popup
+        this.reset(); // form reset होईल
+    });
+</script>
+
+                    
+                    <!-- Step 2: Room Selection -->
+                  <!--   <div class="form-step" id="step-2">
+                        <div class="form-section">
+                            <h3>Select Your Room</h3>
+                            <p>Choose from our available accommodations</p>
+                            
+                            <div class="room-options">
+                                <div class="room-option" data-room="forest-cottage" data-price="7500">
+                                    <div class="room-image">
+                                        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Forest View Cottage">
+                                    </div>
+                                    <div class="room-details">
+                                        <h4>Forest View Cottage</h4>
+                                        <p>Cozy cottage with panoramic views of the surrounding wilderness</p>
+                                        <div class="room-price">₹7,500 / night</div>
+                                        <div class="room-features">
+                                            <span class="room-feature"><i class="fas fa-user"></i> 2 Guests</span>
+                                            <span class="room-feature"><i class="fas fa-bed"></i> 1 King Bed</span>
+                                            <span class="room-feature"><i class="fas fa-ruler-combined"></i> 45 m²</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="room-option" data-room="treehouse-villa" data-price="12000">
+                                    <div class="room-image">
+                                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Treehouse Villa">
+                                    </div>
+                                    <div class="room-details">
+                                        <h4>Treehouse Villa</h4>
+                                        <p>Elevated luxury amidst the trees with modern amenities</p>
+                                        <div class="room-price">₹12,000 / night</div>
+                                        <div class="room-features">
+                                            <span class="room-feature"><i class="fas fa-user"></i> 2 Guests</span>
+                                            <span class="room-feature"><i class="fas fa-bed"></i> 1 King Bed</span>
+                                            <span class="room-feature"><i class="fas fa-ruler-combined"></i> 60 m²</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="room-option" data-room="wilderness-suite" data-price="9500">
+                                    <div class="room-image">
+                                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wilderness Suite">
+                                    </div>
+                                    <div class="room-details">
+                                        <h4>Wilderness Suite</h4>
+                                        <p>Spacious suite with private deck and stunning nature views</p>
+                                        <div class="room-price">₹9,500 / night</div>
+                                        <div class="room-features">
+                                            <span class="room-feature"><i class="fas fa-user"></i> 3 Guests</span>
+                                            <span class="room-feature"><i class="fas fa-bed"></i> 1 King + 1 Single</span>
+                                            <span class="room-feature"><i class="fas fa-ruler-combined"></i> 65 m²</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="1">Back</button>
+                            <button type="button" class="btn next-step" data-next="3">Continue</button>
+                        </div>
+                    </div> -->
+                    
+                    <!-- Step 3: Personal Details -->
+                    <!-- <div class="form-step" id="step-3">
+                        <div class="form-section">
+                            <h3>Your Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Special Requests</h3>
+                            <div class="form-group">
+                                <label for="requests">Any special requests or requirements?</label>
+                                <textarea id="requests" class="form-control" rows="4" placeholder="Please let us know if you have any special requests..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="2">Back</button>
+                            <button type="button" class="btn next-step" data-next="4">Continue to Payment</button>
+                        </div>
+                    </div> -->
+                    
+                    <!-- Step 4: Payment -->
+                  <!--   <div class="form-step" id="step-4">
+                        <div class="form-section">
+                            <h3>Payment Details</h3>
+                            <p>Select your preferred payment method</p>
+                            
+                            <div class="payment-options">
+                                <div class="payment-option selected" data-method="credit-card">
+                                    <div class="payment-icon">
+                                        <i class="far fa-credit-card"></i>
+                                    </div>
+                                    <div>Credit Card</div>
+                                </div>
+                                
+                                <div class="payment-option" data-method="paypal">
+                                    <div class="payment-icon">
+                                        <i class="fab fa-paypal"></i>
+                                    </div>
+                                    <div>PayPal</div>
+                                </div>
+                                
+                                <div class="payment-option" data-method="bank-transfer">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <div>Bank Transfer</div>
+                                </div>
+                                
+                                <div class="payment-option" data-method="upi">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div>UPI</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group" style="margin-top: 20px;">
+                                <label for="cardNumber">Card Number</label>
+                                <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry">Expiry Date</label>
+                                    <input type="text" id="expiry" class="form-control" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" class="form-control" placeholder="123">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cardName">Name on Card</label>
+                                <input type="text" id="cardName" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Terms & Conditions</h3>
+                            <div class="form-group">
+                                <div style="background: #f9f9f9; padding: 15px; border-radius: 6px; max-height: 150px; overflow-y: auto;">
+                                    <p style="font-size: 14px; margin-bottom: 10px;">By completing this booking, you agree to our cancellation policy and terms of service.</p>
+                                    <p style="font-size: 14px;"><strong>Cancellation Policy:</strong> Free cancellation up to 7 days before check-in. Cancellations within 7 days will incur a 50% charge. No-shows will be charged the full amount.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="terms" required>
+                                    <span>I agree to the terms and conditions</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="3">Back</button>
+                            <button type="submit" class="btn" id="complete-booking">Complete Booking</button>
+                        </div>
+                    </div> -->
+                </div>
+                
+                <!-- Booking Summary -->
+               <!--  <div class="booking-summary">
+                    <h3 class="summary-title">Booking Summary</h3>
+                    
+                    <div class="summary-details">
+                        <div class="summary-item">
+                            <span>Check-in</span>
+                            <span id="summary-checkin">-</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Check-out</span>
+                            <span id="summary-checkout">-</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Nights</span>
+                            <span id="summary-nights">0</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Guests</span>
+                            <span id="summary-guests">0 Adults, 0 Children</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Room</span>
+                            <span id="summary-room">Not selected</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Room rate</span>
+                            <span id="summary-rate">₹0</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Taxes & fees</span>
+                            <span id="summary-taxes">₹0</span>
+                        </div>
+                        
+                        <div class="summary-item total">
+                            <span>Total</span>
+                            <span id="summary-total">₹0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-note">
+                        <p><strong>Note:</strong> Your reservation will be confirmed once payment is processed. You will receive a confirmation email with all details.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Aranya Nature Stay</h4>
+                    <p>Experience the perfect harmony of luxury and nature at our eco-friendly retreat nestled in the wilderness.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Our Rooms</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> NATIONAL PARK, TODOBA ANDHARI, CHIMUR MUL ROAD, Sirkada, Maharashtra 441223</li>
+                        <li><i class="fas fa-phone"></i> +91 98230 99025</li>
+                        <li><i class="fas fa-envelope"></i> info@aranyanaturestay.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and special offers.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Aranya Nature Stay. All Rights Reserved. Design By <a href="https://a2zithub.org/" style="text-decoration:none; color:skyblue;">A2Z IT HUB</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = "10px 0";
+                header.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.1)";
+            } else {
+                header.style.padding = "15px 0";
+                header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileToggle.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Fade-in Animation on Scroll
+        function checkFade() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                
+                if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+        
+        // Booking Process Logic
+        const steps = document.querySelectorAll('.form-step');
+        const processSteps = document.querySelectorAll('.process-step');
+        const nextButtons = document.querySelectorAll('.next-step');
+        const prevButtons = document.querySelectorAll('.prev-step');
+        let currentStep = 1;
+        
+        // Initialize date inputs
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        
+        document.getElementById('checkin').valueAsDate = today;
+        document.getElementById('checkout').valueAsDate = tomorrow;
+        
+        // Update booking summary on page load
+        updateBookingSummary();
+        
+        // Next button functionality
+        nextButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const nextStep = parseInt(this.getAttribute('data-next'));
+                
+                // Validate current step before proceeding
+                if (validateStep(currentStep)) {
+                    goToStep(nextStep);
+                }
+            });
+        });
+        
+        // Previous button functionality
+        prevButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const prevStep = parseInt(this.getAttribute('data-prev'));
+                goToStep(prevStep);
+            });
+        });
+        
+        // Room selection
+        const roomOptions = document.querySelectorAll('.room-option');
+        roomOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                roomOptions.forEach(room => room.classList.remove('selected'));
+                this.classList.add('selected');
+                updateBookingSummary();
+            });
+        });
+        
+        // Payment method selection
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                paymentOptions.forEach(method => method.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+        
+        // Form submission
+        document.getElementById('complete-booking').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (validateStep(4)) {
+                // In a real application, you would process the payment and booking here
+                alert('Thank you for your booking! You will receive a confirmation email shortly.');
+                // Reset form or redirect to confirmation page
+            }
+        });
+        
+        // Update booking summary when form values change
+        document.getElementById('checkin').addEventListener('change', updateBookingSummary);
+        document.getElementById('checkout').addEventListener('change', updateBookingSummary);
+        document.getElementById('adults').addEventListener('change', updateBookingSummary);
+        document.getElementById('children').addEventListener('change', updateBookingSummary);
+        
+        // Function to navigate between steps
+        function goToStep(step) {
+            // Hide all steps
+            steps.forEach(s => s.classList.remove('active'));
+            processSteps.forEach(s => {
+                s.classList.remove('active');
+                s.classList.remove('completed');
+            });
+            
+            // Show current step
+            document.getElementById(`step-${step}`).classList.add('active');
+            
+            // Update process steps
+            for (let i = 1; i < step; i++) {
+                document.querySelector(`.process-step[data-step="${i}"]`).classList.add('completed');
+            }
+            
+            document.querySelector(`.process-step[data-step="${step}"]`).classList.add('active');
+            
+            currentStep = step;
+        }
+        
+        // Function to validate each step
+        function validateStep(step) {
+            switch(step) {
+                case 1:
+                    const checkin = new Date(document.getElementById('checkin').value);
+                    const checkout = new Date(document.getElementById('checkout').value);
+                    
+                    if (checkin >= checkout) {
+                        alert('Check-out date must be after check-in date.');
+                        return false;
+                    }
+                    return true;
+                    
+                case 2:
+                    const selectedRoom = document.querySelector('.room-option.selected');
+                    if (!selectedRoom) {
+                        alert('Please select a room to continue.');
+                        return false;
+                    }
+                    return true;
+                    
+                case 3:
+                    const firstName = document.getElementById('firstName').value;
+                    const lastName = document.getElementById('lastName').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    
+                    if (!firstName || !lastName || !email || !phone) {
+                        alert('Please fill in all required fields.');
+                        return false;
+                    }
+                    
+                    // Simple email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        alert('Please enter a valid email address.');
+                        return false;
+                    }
+                    
+                    return true;
+                    
+                case 4:
+                    const terms = document.getElementById('terms').checked;
+                    if (!terms) {
+                        alert('Please accept the terms and conditions to complete your booking.');
+                        return false;
+                    }
+                    return true;
+                    
+                default:
+                    return true;
+            }
+        }
+        
+        // Function to update booking summary
+        function updateBookingSummary() {
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            const adults = document.getElementById('adults').value;
+            const children = document.getElementById('children').value;
+            const selectedRoom = document.querySelector('.room-option.selected');
+            
+            // Update check-in/check-out dates
+            document.getElementById('summary-checkin').textContent = checkin ? formatDate(checkin) : '-';
+            document.getElementById('summary-checkout').textContent = checkout ? formatDate(checkout) : '-';
+            
+            // Calculate number of nights
+            let nights = 0;
+            if (checkin && checkout) {
+                const checkinDate = new Date(checkin);
+                const checkoutDate = new Date(checkout);
+                nights = Math.ceil((checkoutDate - checkinDate) / (1000 * 60 * 60 * 24));
+            }
+            document.getElementById('summary-nights').textContent = nights;
+            
+            // Update guests
+            document.getElementById('summary-guests').textContent = `${adults} Adults, ${children} Children`;
+            
+            // Update room information
+            if (selectedRoom) {
+                const roomName = selectedRoom.querySelector('h4').textContent;
+                const roomPrice = parseInt(selectedRoom.getAttribute('data-price'));
+                
+                document.getElementById('summary-room').textContent = roomName;
+                document.getElementById('summary-rate').textContent = `₹${roomPrice.toLocaleString()}`;
+                
+                // Calculate total
+                const roomTotal = roomPrice * nights;
+                const taxes = Math.round(roomTotal * 0.18); // 18% tax
+                const total = roomTotal + taxes;
+                
+                document.getElementById('summary-taxes').textContent = `₹${taxes.toLocaleString()}`;
+                document.getElementById('summary-total').textContent = `₹${total.toLocaleString()}`;
+            } else {
+                document.getElementById('summary-room').textContent = 'Not selected';
+                document.getElementById('summary-rate').textContent = '₹0';
+                document.getElementById('summary-taxes').textContent = '₹0';
+                document.getElementById('summary-total').textContent = '₹0';
+            }
+        }
+        
+        // Helper function to format date
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
+    </script>
+    <div class="floating-contact">
+    <a href="tel:+919823099025" class="contact-btn call-btn" title="Call Us">
+        <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://wa.me/919823099025" class="contact-btn whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+</body>
+</html>

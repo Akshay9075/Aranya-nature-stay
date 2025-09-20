@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the beauty of Aranya Nature Stay through our photo gallery - nature, accommodations, and experiences">
+    <meta name="keywords" content="Aranya, nature stay, eco resort, photo gallery, nature photography, wildlife">
+    <meta name="author" content="Aranya Nature Stay">
+    <title>Photo Gallery - Aranya Nature Stay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c5e1a;
+            --secondary: #a38b5b;
+            --light: #f5f5f5;
+            --dark: #1a1a1a;
+            --accent: #8e7cc3;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--primary);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background: #3a7a23;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: #b89d69;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.40);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-left: 10px;
+        }
+        
+        .logo-subtext {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #d17910;
+            display: block;
+            margin-top: -5px;
+        }
+        
+        .nav-menu {
+            display: flex;
+        }
+        
+        .nav-menu li {
+            margin: 0 12px;
+        }
+        
+        .nav-menu a {
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 15px;
+            position: relative;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Page Header */
+        .page-header {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/gallery.jpeg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Gallery Filters */
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-category {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .gallery-title {
+            color: #fff;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1001;
+            overflow: hidden;
+        }
+        
+        .lightbox-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+        }
+        
+        .lightbox-caption {
+            color: #fff;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1002;
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            transform: translateY(-50%);
+            z-index: 1002;
+        }
+        
+        .lightbox-nav button {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .lightbox-nav button:hover {
+            background: var(--primary);
+        }
+        
+        /* Instagram Section */
+        .instagram {
+            background: #f5f5f5;
+            text-align: center;
+        }
+        
+        .instagram-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        .instagram-item {
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .instagram-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .instagram-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .instagram-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .instagram-item:hover .instagram-overlay {
+            opacity: 1;
+        }
+        
+        .instagram-icon {
+            color: #fff;
+            font-size: 24px;
+        }
+        
+        /* Call to Action */
+        .cta {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('image/capture.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+        
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            transition: var(--transition);
+            color: #ccc;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background: #fff;
+                flex-direction: column;
+                padding: 100px 20px 0;
+                transition: var(--transition);
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .gallery-item {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .filter-btn {
+                width: 200px;
+                text-align: center;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10000;
+}
+
+.contact-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.call-btn {
+    background: var(--primary); /* Green shade or your primary color */
+}
+
+.whatsapp-btn {
+    background: #25d366; /* WhatsApp green */
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+    <!-- Logo Image -->
+    <img src="image/aranya1.png" alt="Aranya Nature Stay Logo" style="height:100px; width:auto;opacity: 2;">
+    
+    <!-- Logo Text (Optional) -->
+  <!--   <div class="logo-text">
+        Aranya <span class="logo-subtext">NATURE STAY</span>
+    </div> -->
+</a>
+            
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" style="color: black;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="rooms.html">Our Rooms</a></li>
+                <li><a href="gallery.html" class="active">Photo Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="booking.html" class="btn" style="margin-top: -10px;">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Photo Gallery</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="gallery.html">Photo Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Discover <span style="color: #d17910;">Aranya</span> Through Images</h2>
+                <p>Explore the beauty of our nature stay through these captivating photographs</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="accommodations">Accommodations</button>
+                <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+                <button class="filter-btn" data-filter="activities">Activities</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Nature Images -->
+                <div class="gallery-item fade-in" data-category="nature">
+                    <img src="image/nature.webp" alt="Forest View">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Nature</div>
+                        <div class="gallery-title">Tadoba nature beauty</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="nature">
+                    <img src="image/sunset.jpeg" alt="Sunset View">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Nature</div>
+                        <div class="gallery-title">Breathtaking Sunsets</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="nature">
+                    <img src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mountain View">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Nature</div>
+                        <div class="gallery-title">Majestic Mountains</div>
+                    </div>
+                </div>
+                
+                <!-- Accommodations Images -->
+                <div class="gallery-item fade-in" data-category="accommodations">
+                    <img src="image/accom.jpeg" alt="Forest Cottage">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Accommodations</div>
+                        <div class="gallery-title">Forest View Cottage</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="accommodations">
+                    <img src="image/accom.jpeg" alt="Treehouse Villa">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Accommodations</div>
+                        <div class="gallery-title">Treehouse Villa</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in" data-category="accommodations">
+                    <img src="image/accom4.jpeg" alt="Treehouse Villa">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Accommodations</div>
+                        <div class="gallery-title">Historic Touch</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in" data-category="accommodations">
+                    <img src="image/about.jpeg" alt="Treehouse Villa">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Accommodations</div>
+                        <div class="gallery-title">Stressless Stay</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="accommodations">
+                    <img src="image/accom3.jpeg" alt="Wilderness Suite">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Accommodations</div>
+                        <div class="gallery-title">Wilderness Suite</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in" data-category="accommodations">
+                    <img src="image/accom2.jpeg" alt="Wilderness Suite">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Accommodations</div>
+                        <div class="gallery-title">Healthy Food</div>
+                    </div>
+                </div>
+                
+                <!-- Wildlife Images -->
+                <div class="gallery-item fade-in" data-category="wildlife">
+                    <img src="image/butterfly.webp" alt="Butterfly">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Wildlife</div>
+                        <div class="gallery-title">Colorful Butterflies</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="wildlife">
+                    <img src="image/bird.jpg" alt="Bird">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Wildlife</div>
+                        <div class="gallery-title">Exotic Birds</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="wildlife">
+                    <img src="image/deer.jpg" alt="Deer">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Wildlife</div>
+                        <div class="gallery-title">Spotted Deer</div>
+                    </div>
+                </div>
+                
+                <!-- Activities Images -->
+                <div class="gallery-item fade-in" data-category="activities">
+                    <img src="image/lake.webp" alt="Campfire">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Activities</div>
+                        <div class="gallery-title">Lake visiting</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="activities">
+                    <img src="image/walk1.jpeg" alt="Nature Walk">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Activities</div>
+                        <div class="gallery-title">Guided Nature Walks</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="activities">
+                    <img src="image/safari.jpg" alt="Star Gazing">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Activities</div>
+                        <div class="gallery-title">Tiger safari</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram">
+        <div class="container">
+            <div class="section-title">
+                <h2>Follow Us on Instagram</h2>
+                <p>Tag your photos with #AranyaNatureStay to be featured</p>
+            </div>
+            
+            <div class="instagram-feed">
+                <div class="instagram-item">
+                    <img src="image/sunset.jpeg" alt="Instagram Photo">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Instagram Photo">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="instagram-item">
+                    <img src="image/deer.jpg" alt="Instagram Photo">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="instagram-item">
+                    <img src="image/walk.jpeg" alt="Instagram Photo">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="instagram-item">
+                    <img src="image/food.jpeg" alt="Instagram Photo">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="instagram-item">
+                    <img src="image/resto.jpeg" alt="Instagram Photo">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="https://www.instagram.com/aranyanaturestay" target="_blank" class="btn" style="margin-top: 40px;">Follow on Instagram</a>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Capture Your Own Memories</h2>
+            <p>Book your stay at Aranya and create unforgettable moments in nature</p>
+            <a href="booking.html" class="btn" style="margin-top: 30px;">Book Your Stay</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Aranya Nature Stay</h4>
+                    <p>Experience the perfect harmony of luxury and nature at our eco-friendly retreat nestled in the wilderness.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Our Rooms</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> NATIONAL PARK, TODOBA ANDHARI, CHIMUR MUL ROAD, Sirkada, Maharashtra 441223</li>
+                        <li><i class="fas fa-phone"></i> +91 98230 99025</li>
+                        <li><i class="fas fa-envelope"></i> info@aranyanaturestay.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and special offers.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+           <div class="copyright">
+                <p>&copy; 2025 Aranya Nature Stay. All Rights Reserved. Design By <a href="https://a2zithub.org/" style="text-decoration:none; color:skyblue;">A2Z IT HUB</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <div class="lightbox-close"><i class="fas fa-times"></i></div>
+        <div class="lightbox-nav">
+            <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="lightbox-content">
+            <img src="" alt="">
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script>
+        // Sticky Header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = "10px 0";
+                header.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.1)";
+            } else {
+                header.style.padding = "15px 0";
+                header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileToggle.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Fade-in Animation on Scroll
+        function checkFade() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                
+                if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+        
+        // Gallery Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                // Show/hide gallery items based on filter
+                galleryItems.forEach(item => {
+                    if (filter === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        const categories = item.getAttribute('data-category');
+                        if (categories === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Lightbox functionality
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = document.querySelector('.lightbox-content img');
+        const lightboxCaption = document.querySelector('.lightbox-caption');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const lightboxPrev = document.querySelector('.lightbox-prev');
+        const lightboxNext = document.querySelector('.lightbox-next');
+        
+        // Get all gallery images for lightbox
+        const galleryImages = Array.from(document.querySelectorAll('.gallery-item img'));
+        let currentImageIndex = 0;
+        
+        // Open lightbox when clicking on gallery image
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                const category = item.querySelector('.gallery-category').textContent;
+                const title = item.querySelector('.gallery-title').textContent;
+                
+                lightboxImg.src = img.src;
+                lightboxCaption.textContent = `${category} - ${title}`;
+                lightbox.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                
+                currentImageIndex = index;
+            });
+        });
+        
+        // Close lightbox
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Navigate lightbox
+        lightboxPrev.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateLightboxImage();
+        });
+        
+        lightboxNext.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            updateLightboxImage();
+        });
+        
+        function updateLightboxImage() {
+            const item = galleryImages[currentImageIndex].closest('.gallery-item');
+            const category = item.querySelector('.gallery-category').textContent;
+            const title = item.querySelector('.gallery-title').textContent;
+            
+            lightboxImg.src = galleryImages[currentImageIndex].src;
+            lightboxCaption.textContent = `${category} - ${title}`;
+        }
+        
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.style.display === 'block') {
+                if (e.key === 'Escape') {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                } else if (e.key === 'ArrowLeft') {
+                    currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+                    updateLightboxImage();
+                } else if (e.key === 'ArrowRight') {
+                    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                    updateLightboxImage();
+                }
+            }
+        });
+    </script>
+    <div class="floating-contact">
+    <a href="tel:+919823099025" class="contact-btn call-btn" title="Call Us">
+        <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://wa.me/919823099025" class="contact-btn whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+</body>
+</html>

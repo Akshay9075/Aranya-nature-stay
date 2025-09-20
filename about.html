@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Aranya Nature Stay - our story, mission, and commitment to sustainable eco-tourism and nature experiences">
+    <meta name="keywords" content="Aranya, nature stay, eco resort, about us, sustainability, wildlife resort">
+    <meta name="author" content="Aranya Nature Stay">
+    <title>About Us - Aranya Nature Stay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c5e1a;
+            --secondary: #a38b5b;
+            --light: #f5f5f5;
+            --dark: #1a1a1a;
+            --accent: #8e7cc3;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--primary);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background: #3a7a23;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: #b89d69;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.40);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-left: 10px;
+        }
+        
+        .logo-subtext {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #d17910;
+            display: block;
+            margin-top: -5px;
+        }
+        
+        .nav-menu {
+            display: flex;
+        }
+        
+        .nav-menu li {
+            margin: 0 12px;
+        }
+        
+        .nav-menu a {
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 15px;
+            position: relative;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Page Header */
+        .page-header {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/about1.jpeg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* About Content */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Mission & Vision */
+        .mission-vision {
+            background: #f5f5f5;
+        }
+        
+        .mv-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .mv-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .mv-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .mv-icon {
+            font-size: 40px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        /* Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .team-member:hover .team-img img {
+            transform: scale(1.1);
+        }
+        
+        .team-info {
+            padding: 20px;
+        }
+        
+        .team-info h3 {
+            margin-bottom: 5px;
+        }
+        
+        .team-role {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* Values */
+        .values-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .value-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Sustainability */
+        .sustainability {
+            background: #f5f5f5;
+        }
+        
+        .sustainability-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .sustainability-text {
+            flex: 1;
+        }
+        
+        .sustainability-img {
+            flex: 0.5;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Call to Action */
+        .cta {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/about.jpeg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+        
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            transition: var(--transition);
+            color: #ccc;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content,
+            .sustainability-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background: #fff;
+                flex-direction: column;
+                padding: 100px 20px 0;
+                transition: var(--transition);
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10000;
+}
+
+.contact-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.call-btn {
+    background: var(--primary); /* Green shade or your primary color */
+}
+
+.whatsapp-btn {
+    background: #25d366; /* WhatsApp green */
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+           <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+    <!-- Logo Image -->
+    <img src="image/aranya1.png" alt="Aranya Nature Stay Logo" style="height:100px; width:auto;opacity: 2;">
+    
+    <!-- Logo Text (Optional) -->
+  <!--   <div class="logo-text">
+        Aranya <span class="logo-subtext">NATURE STAY</span>
+    </div> -->
+</a>
+            
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" style="color: black;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="rooms.html">Our Rooms</a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="booking.html" class="btn" style="margin-top: -10px;">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About <span style="color: #d17910;">Aranya</span></h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="about.html">About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section id="our-story">
+        <div class="container">
+            <div class="section-title">
+                <h2>🌿 Our Story</h2>
+                <p>How Aranya Nature Stay came to be and our journey so far</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>From a Vision to Reality</h3>
+                    <p>Founded in 2010, Aranya Nature Stay Restaurant was born out of a simple idea – to create a dining space in the heart of <span style="color: #d17910;font-size: 22px;">𝖳𝖺𝖽𝗈𝖻𝖺 𝖠𝖻𝗁𝖺𝗒𝖺𝗋𝖺𝗇𝗒𝖺</span> where food and nature come together in harmony. Our founders, passionate naturalists and food lovers, dreamed of a place where guests could enjoy wholesome, flavorful meals surrounded by the untouched beauty of the forest.
+
+        </p>
+                    <p>What started as a small eco-camp with just three cottages has now grown into a sustainable nature retreat with 25 uniquely designed accommodations, without losing sight of our original mission: to provide immersive nature experiences while preserving the ecological balance of the region.</p>
+                    <p>Over the years, we've hosted thousands of guests from around the world, each leaving with a deeper appreciation for nature and memories that last a lifetime.</p>
+                </div>
+                
+                <div class="about-img fade-in">
+                    <img src="image/tadoba1.jpg" alt="Aranya Nature Stay Founding">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Mission & Vision</h2>
+                <p>What drives us to do what we do</p>
+            </div>
+            
+            <div class="mv-container">
+                <div class="mv-card fade-in">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>🌱 Our Mission</h3>
+                    <p>At <span style="color: #d17910;">Aranya</span> Nature Stay Restaurant, our mission is simple yet meaningful:
+                        to serve food that nourishes both the body and the soul, while staying true to the essence of nature.</p>
+                </div>
+                
+                <div class="mv-card fade-in">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>🌟 Our Vision</h3>
+                    <p>Our vision is to become a sanctuary of flavors and experiences where every guest feels connected to nature through food. Every guest experiences the calm and beauty of <span style="color: #d17910;">Tadoba’s</span> wilderness while dining.</p>
+                </div>
+                
+                <div class="mv-card fade-in">
+                    <div class="mv-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>🤝 Our Promise</h3>
+                    <p>To continuously minimize our ecological footprint, support local communities, and educate our guests about the importance of preserving our planet's natural wonders for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+   <!--  <section id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>The passionate people behind Aranya Nature Stay</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member fade-in">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rajesh Kumar">
+                    </div>
+                    <div class="team-info">
+                        <h3>Rajesh Kumar</h3>
+                        <div class="team-role">Founder & Naturalist</div>
+                        <p>With over 25 years of experience in wildlife conservation, Rajesh leads our sustainability initiatives.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member fade-in">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Priya Sharma">
+                    </div>
+                    <div class="team-info">
+                        <h3>Priya Sharma</h3>
+                        <div class="team-role">Head of Hospitality</div>
+                        <p>Priya ensures that every guest experiences the perfect blend of comfort and nature during their stay.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member fade-in">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vikram Singh">
+                    </div>
+                    <div class="team-info">
+                        <h3>Vikram Singh</h3>
+                        <div class="team-role">Head Guide</div>
+                        <p>Vikram's extensive knowledge of local flora and fauna makes our nature walks truly educational.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member fade-in">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Anjali Patel">
+                    </div>
+                    <div class="team-info">
+                        <h3>Anjali Patel</h3>
+                        <div class="team-role">Sustainability Manager</div>
+                        <p>Anjali oversees all our eco-friendly practices and community outreach programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Values -->
+    <section id="values">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            
+            <div class="values-container">
+                <div class="value-card fade-in">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>We're committed to minimizing our environmental impact through renewable energy, waste reduction, and water conservation.</p>
+                </div>
+                
+                <div class="value-card fade-in">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>We support local communities by sourcing products locally and providing employment opportunities to residents.</p>
+                </div>
+                
+                <div class="value-card fade-in">
+                    <div class="value-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <p>We believe in empowering our guests with knowledge about local ecosystems and conservation efforts.</p>
+                </div>
+                
+                <div class="value-card fade-in">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Passion</h3>
+                    <p>Our team is driven by a genuine love for nature and a desire to share its wonders with others.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability -->
+    <section class="sustainability">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Sustainability Efforts</h2>
+                <p>How we're working to protect the environment we love</p>
+            </div>
+            
+            <div class="sustainability-content">
+                <div class="sustainability-text">
+                    <h3>Protecting Nature Through Action</h3>
+                    <p>At <span style="color: #d17910;">Aranya</span>, sustainability isn't just a buzzword—it's the foundation of everything we do. We've implemented numerous initiatives to minimize our ecological footprint and contribute positively to our environment.</p>
+                    
+                    <ul style="margin: 20px 0 20px 20px;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i> 100% of our energy comes from renewable sources, primarily solar power</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i> Comprehensive water conservation and rainwater harvesting systems</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i> Zero-waste policy with extensive recycling and composting programs</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i> Organic kitchen garden providing fresh produce for our restaurant</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i> Support of local conservation initiatives and wildlife protection programs</li>
+                    </ul>
+                    
+                    <p>We continuously look for new ways to improve our sustainability practices and regularly share our journey with guests who are interested in implementing similar measures in their own lives.</p>
+                </div>
+                
+                <div class="sustainability-img fade-in">
+                    <img src="image/efforts.jpeg" alt="Sustainability at Aranya">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Experience Aranya For Yourself</h2>
+            <p>Come see why our guests return year after year to experience nature's magic</p>
+            <a href="booking.html" class="btn" style="margin-top: 30px;">Book Your Stay</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Aranya Nature Stay</h4>
+                    <p>Experience the perfect harmony of luxury and nature at our eco-friendly retreat nestled in the wilderness.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Our Rooms</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> NATIONAL PARK, TODOBA ANDHARI, CHIMUR MUL ROAD, Sirkada, Maharashtra 441223</li>
+                        <li><i class="fas fa-phone"></i> +91 98230 99025</li>
+                        <li><i class="fas fa-envelope"></i> info@aranyanaturestay.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and special offers.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Aranya Nature Stay. All Rights Reserved. Design By <a href="https://a2zithub.org/" style="text-decoration:none; color:skyblue;">A2Z IT HUB</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = "10px 0";
+                header.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.1)";
+            } else {
+                header.style.padding = "15px 0";
+                header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileToggle.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Fade-in Animation on Scroll
+        function checkFade() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                
+                if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+    </script>
+    <div class="floating-contact">
+    <a href="tel:+919823099025" class="contact-btn call-btn" title="Call Us">
+        <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://wa.me/919823099025" class="contact-btn whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+</body>
+</html>

@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover our unique accommodations at Aranya Nature Stay - from forest view cottages to luxurious treehouse villas">
+    <meta name="keywords" content="Aranya, nature stay, eco resort, rooms, accommodations, treehouse villa, forest cottage">
+    <meta name="author" content="Aranya Nature Stay">
+    <title>Our Rooms - Aranya Nature Stay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c5e1a;
+            --secondary: #a38b5b;
+            --light: #f5f5f5;
+            --dark: #1a1a1a;
+            --accent: #8e7cc3;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--primary);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background: #3a7a23;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: #b89d69;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.40);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-left: 10px;
+        }
+        
+        .logo-subtext {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #d17910;
+            display: block;
+            margin-top: -5px;
+        }
+        
+        .nav-menu {
+            display: flex;
+        }
+        
+        .nav-menu li {
+            margin: 0 12px;
+        }
+        
+        .nav-menu a {
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 15px;
+            position: relative;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Page Header */
+        .page-header {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Room Filters */
+        .room-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        
+        /* Rooms Grid */
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .room-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .room-img {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .room-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .room-card:hover .room-img img {
+            transform: scale(1.1);
+        }
+        
+        .room-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--secondary);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .room-info {
+            padding: 25px;
+        }
+        
+        .room-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        .room-info p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .room-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .room-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .room-feature i {
+            color: var(--primary);
+        }
+        
+        .room-price {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .room-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* Room Details Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1001;
+            overflow-y: auto;
+            padding: 50px 20px;
+        }
+        
+        .modal-content {
+            background: #fff;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        .modal-body {
+            padding: 30px;
+        }
+        
+        /* Amenities */
+        .amenities {
+            background: #f5f5f5;
+        }
+        
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .amenity-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .amenity-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .amenity-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1501785888040-7cefece4ab5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .testimonials h2 {
+            color: #fff;
+        }
+        
+        .testimonial-slide {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        /* Call to Action */
+        .cta {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/about.jpeg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+        
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            transition: var(--transition);
+            color: #ccc;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .rooms-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background: #fff;
+                flex-direction: column;
+                padding: 100px 20px 0;
+                transition: var(--transition);
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .room-actions {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .room-actions .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+            
+            .rooms-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10000;
+}
+
+.contact-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.call-btn {
+    background: var(--primary); /* Green shade or your primary color */
+}
+
+.whatsapp-btn {
+    background: #25d366; /* WhatsApp green */
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+           <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+    <!-- Logo Image -->
+    <img src="image/aranya1.png" alt="Aranya Nature Stay Logo" style="height:100px; width:auto;opacity: 2;">
+    
+    <!-- Logo Text (Optional) -->
+  <!--   <div class="logo-text">
+        Aranya <span class="logo-subtext">NATURE STAY</span>
+    </div> -->
+</a>
+            
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" style="color: black;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="rooms.html" class="active">Our Rooms</a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="booking.html" class="btn" style="margin-top: -10px;">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Rooms</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="rooms.html">Our Rooms</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms">
+        <div class="container">
+            <div class="section-title">
+                <h2>Luxurious Accommodations</h2>
+                <p>Experience the perfect blend of comfort and nature in our thoughtfully designed rooms</p>
+            </div>
+            
+           <!--  <div class="room-filters">
+                <button class="filter-btn active" data-filter="all">All Rooms</button>
+                <button class="filter-btn" data-filter="cottage">Cottages</button>
+                <button class="filter-btn" data-filter="villa">Villas</button>
+                <button class="filter-btn" data-filter="suite">Suites</button>
+                <button class="filter-btn" data-filter="family">Family</button>
+            </div> -->
+            
+            <div class="rooms-grid">
+               <!-- Deluxe Room Card -->
+<div class="room-card fade-in" data-category="cottage">
+    <div class="room-img">
+        <img src="image/room1.jpeg" alt="Deluxe Room">
+        <div class="room-badge">Popular</div>
+    </div>
+
+    <div class="room-info">
+        <h3>Deluxe Room</h3>
+        <p class="room-desc">
+            Experience comfort in our <strong>3 Deluxe Rooms</strong> with king-size beds, or choose from our <strong>6-bed dormitory</strong>. 
+            <br><br>
+            <ul>
+                <li>Deluxe Room: ₹5,000 for 2 persons (all meals included – veg & non-veg)</li>
+                <li>Extra Bed: ₹2,000</li>
+                <li>Dormitory: ₹2,200 per person</li>
+                <li><em>* Safari charges not included</em></li>
+            </ul>
+        </p>
+
+        <div class="room-features">
+            <div class="room-feature">
+                <i class="fas fa-user"></i>
+                <span>2 Guests</span>
+            </div>
+            <div class="room-feature">
+                <i class="fas fa-bed"></i>
+                <span>1 King Bed</span>
+            </div>
+           <!--  <div class="room-feature">
+                <i class="fas fa-ruler-combined"></i>
+                <span>45 m²</span>
+            </div> -->
+        </div>
+
+        <span class="room-price">₹5000 / Night</span>
+
+        <div class="room-actions">
+            <!-- <a href="#" class="btn btn-outline view-details">View Details</a> -->
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </div>
+</div>
+
+
+               
+                <!-- Deluxe Room Card -->
+<div class="room-card fade-in" data-category="cottage">
+    <div class="room-img">
+        <img src="image/room2.jpeg" alt="Deluxe Room">
+        <div class="room-badge">Popular</div>
+    </div>
+
+    <div class="room-info">
+        <h3>Deluxe Room</h3>
+        <p class="room-desc">
+            Experience comfort in our <strong>3 Deluxe Rooms</strong> with king-size beds, or choose from our <strong>6-bed dormitory</strong>. 
+            <br><br>
+            <ul>
+                <li>Deluxe Room: ₹5,000 for 2 persons (all meals included – veg & non-veg)</li>
+                <li>Extra Bed: ₹2,000</li>
+                <li>Dormitory: ₹2,200 per person</li>
+                <li><em>* Safari charges not included</em></li>
+            </ul>
+        </p>
+
+        <div class="room-features">
+            <div class="room-feature">
+                <i class="fas fa-user"></i>
+                <span>2 Guests</span>
+            </div>
+            <div class="room-feature">
+                <i class="fas fa-bed"></i>
+                <span>1 King Bed</span>
+            </div>
+           <!--  <div class="room-feature">
+                <i class="fas fa-ruler-combined"></i>
+                <span>45 m²</span>
+            </div> -->
+        </div>
+
+        <span class="room-price">₹5000 / Night</span>
+
+        <div class="room-actions">
+            <!-- <a href="#" class="btn btn-outline view-details">View Details</a> -->
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </div>
+</div>
+
+
+ <!-- Deluxe Room Card -->
+<div class="room-card fade-in" data-category="cottage">
+    <div class="room-img">
+        <img src="image/room3.jpeg" alt="Deluxe Room">
+        <div class="room-badge">Popular</div>
+    </div>
+
+    <div class="room-info">
+        <h3>Deluxe Room</h3>
+        <p class="room-desc">
+            Experience comfort in our <strong>3 Deluxe Rooms</strong> with king-size beds, or choose from our <strong>6-bed dormitory</strong>. 
+            <br><br>
+            <ul>
+                <li>Deluxe Room: ₹5,000 for 2 persons (all meals included – veg & non-veg)</li>
+                <li>Extra Bed: ₹2,000</li>
+                <li>Dormitory: ₹2,200 per person</li>
+                <li><em>* Safari charges not included</em></li>
+            </ul>
+        </p>
+
+        <div class="room-features">
+            <div class="room-feature">
+                <i class="fas fa-user"></i>
+                <span>2 Guests</span>
+            </div>
+            <div class="room-feature">
+                <i class="fas fa-bed"></i>
+                <span>1 King Bed</span>
+            </div>
+           <!--  <div class="room-feature">
+                <i class="fas fa-ruler-combined"></i>
+                <span>45 m²</span>
+            </div> -->
+        </div>
+
+        <span class="room-price">₹5000 / Night</span>
+
+        <div class="room-actions">
+            <!-- <a href="#" class="btn btn-outline view-details">View Details</a> -->
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </div>
+</div>
+
+
+
+                
+                <!-- Treehouse Villa -->
+                <!-- <div class="room-card fade-in" data-category="villa">
+                    <div class="room-img">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Treehouse Villa">
+                        <div class="room-badge">Luxury</div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Treehouse Villa</h3>
+                        <p>Elevated luxury amidst the trees with modern amenities and breathtaking canopy views.</p>
+                        
+                        <div class="room-features">
+                            <div class="room-feature">
+                                <i class="fas fa-user"></i>
+                                <span>2 Guests</span>
+                            </div>
+                            <div class="room-feature">
+                                <i class="fas fa-bed"></i>
+                                <span>1 King Bed</span>
+                            </div>
+                            <div class="room-feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>60 m²</span>
+                            </div>
+                        </div>
+                        
+                        <span class="room-price">₹12,000 / night</span>
+                        
+                        <div class="room-actions">
+                            <a href="#" class="btn btn-outline view-details" data-room="treehouse-villa">View Details</a>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Wilderness Suite -->
+               <!--  <div class="room-card fade-in" data-category="suite">
+                    <div class="room-img">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wilderness Suite">
+                    </div>
+                    <div class="room-info">
+                        <h3>Wilderness Suite</h3>
+                        <p>Spacious suite with private deck and stunning nature views. Includes a separate living area.</p>
+                        
+                        <div class="room-features">
+                            <div class="room-feature">
+                                <i class="fas fa-user"></i>
+                                <span>3 Guests</span>
+                            </div>
+                            <div class="room-feature">
+                                <i class="fas fa-bed"></i>
+                                <span>1 King + 1 Single</span>
+                            </div>
+                            <div class="room-feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>65 m²</span>
+                            </div>
+                        </div>
+                        
+                        <span class="room-price">₹9,500 / night</span>
+                        
+                        <div class="room-actions">
+                            <a href="#" class="btn btn-outline view-details" data-room="wilderness-suite">View Details</a>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                 -->
+                <!-- Family Bungalow -->
+              <!--   <div class="room-card fade-in" data-category="family cottage">
+                    <div class="room-img">
+                        <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Family Bungalow">
+                        <div class="room-badge">Family</div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Family Bungalow</h3>
+                        <p>Spacious two-bedroom bungalow perfect for families, with direct garden access and play area.</p>
+                        
+                        <div class="room-features">
+                            <div class="room-feature">
+                                <i class="fas fa-user"></i>
+                                <span>4 Guests</span>
+                            </div>
+                            <div class="room-feature">
+                                <i class="fas fa-bed"></i>
+                                <span>2 Queen Beds</span>
+                            </div>
+                            <div class="room-feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>80 m²</span>
+                            </div>
+                        </div>
+                        
+                        <span class="room-price">₹14,000 / night</span>
+                        
+                        <div class="room-actions">
+                            <a href="#" class="btn btn-outline view-details" data-room="family-bungalow">View Details</a>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                 -->
+                <!-- Riverside Hut -->
+               <!--  <div class="room-card fade-in" data-category="cottage">
+                    <div class="room-img">
+                        <img src="https://images.unsplash.com/photo-1595877244574-e90ce41ce089?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Riverside Hut">
+                    </div>
+                    <div class="room-info">
+                        <h3>Riverside Hut</h3>
+                        <p>Charming hut located by the gentle river, with a private sitting area to enjoy the sounds of water.</p>
+                        
+                        <div class="room-features">
+                            <div class="room-feature">
+                                <i class="fas fa-user"></i>
+                                <span>2 Guests</span>
+                            </div>
+                            <div class="room-feature">
+                                <i class="fas fa-bed"></i>
+                                <span>1 Queen Bed</span>
+                            </div>
+                            <div class="room-feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>40 m²</span>
+                            </div>
+                        </div>
+                        
+                        <span class="room-price">₹6,500 / night</span>
+                        
+                        <div class="room-actions">
+                            <a href="#" class="btn btn-outline view-details" data-room="riverside-hut">View Details</a>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                 -->
+                <!-- Canopy Suite -->
+                <!-- <div class="room-card fade-in" data-category="suite villa">
+                    <div class="room-img">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Canopy Suite">
+                        <div class="room-badge">New</div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Canopy Suite</h3>
+                        <p>Luxurious suite with floor-to-ceiling windows offering unparalleled forest canopy views.</p>
+                        
+                        <div class="room-features">
+                            <div class="room-feature">
+                                <i class="fas fa-user"></i>
+                                <span>2 Guests</span>
+                            </div>
+                            <div class="room-feature">
+                                <i class="fas fa-bed"></i>
+                                <span>1 King Bed</span>
+                            </div>
+                            <div class="room-feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>55 m²</span>
+                            </div>
+                        </div>
+                        
+                        <span class="room-price">₹11,000 / night</span>
+                        
+                        <div class="room-actions">
+                            <a href="#" class="btn btn-outline view-details" data-room="canopy-suite">View Details</a>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Room Amenities</h2>
+                <p>All our accommodations include these premium amenities for your comfort</p>
+            </div>
+            
+            <div class="amenities-grid">
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>Air Conditioning</h3>
+                    <p>Climate control for your comfort in all weather conditions</p>
+                </div>
+                
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Free Wi-Fi</h3>
+                    <p>High-speed internet access throughout the property</p>
+                </div>
+                
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Smart TV</h3>
+                    <p>Entertainment options with streaming capabilities</p>
+                </div>
+                
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <h3>Tea/Coffee Maker</h3>
+                    <p>In-room facilities for your morning brew</p>
+                </div>
+                
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon">
+                        <i class="fas fa-shower"></i>
+                    </div>
+                    <h3>Rain Shower</h3>
+                    <p>Luxurious rainfall showerheads in all bathrooms</p>
+                </div>
+                
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3>Private Deck</h3>
+                    <p>Outdoor space to enjoy the surrounding nature</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Guest Experiences</h2>
+                <p>What our guests say about their stay at Aranya</p>
+            </div>
+            
+            <div class="testimonial-slide">
+                <p class="testimonial-text">"We stayed in the Treehouse Villa and it exceeded all our expectations. Waking up to the sounds of the forest and enjoying our coffee on the private deck was absolutely magical. The attention to detail in the room design was impressive!"</p>
+                <p class="testimonial-author">- Anita & Raj, Mumbai</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Experience Aranya?</h2>
+            <p>Book your stay now and immerse yourself in nature's embrace</p>
+            <a href="booking.html" class="btn" style="margin-top: 30px;">Book Your Stay</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Aranya Nature Stay</h4>
+                    <p>Experience the perfect harmony of luxury and nature at our eco-friendly retreat nestled in the wilderness.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Our Rooms</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> NATIONAL PARK, TODOBA ANDHARI, CHIMUR MUL ROAD, Sirkada, Maharashtra 441223</li>
+                        <li><i class="fas fa-phone"></i> +91 98230 99025</li>
+                        <li><i class="fas fa-envelope"></i> info@aranyanaturestay.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and special offers.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+           <div class="copyright">
+                <p>&copy; 2025 Aranya Nature Stay. All Rights Reserved. Design By <a href="https://a2zithub.org/" style="text-decoration:none; color:skyblue;">A2Z IT HUB</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Room Details Modals -->
+    <div id="forest-cottage-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-close"><i class="fas fa-times"></i></div>
+            <div class="modal-body">
+                <h2>Forest View Cottage</h2>
+                <!-- Room details would go here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sticky Header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = "10px 0";
+                header.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.1)";
+            } else {
+                header.style.padding = "15px 0";
+                header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileToggle.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Fade-in Animation on Scroll
+        function checkFade() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                
+                if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+        
+        // Room Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const roomCards = document.querySelectorAll('.room-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                // Show/hide rooms based on filter
+                roomCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (categories.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Room Details Modal
+        const viewDetailsButtons = document.querySelectorAll('.view-details');
+        const modals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.modal-close');
+        
+        viewDetailsButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const roomType = button.getAttribute('data-room');
+                const modal = document.getElementById(`${roomType}-modal`);
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+        
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal');
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            modals.forEach(modal => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // Testimonial Carousel
+        const testimonials = [
+            {
+                text: "\"We stayed in the Treehouse Villa and it exceeded all our expectations. Waking up to the sounds of the forest and enjoying our coffee on the private deck was absolutely magical!\"",
+                author: "Anita & Raj, Mumbai"
+            },
+            {
+                text: "\The Family Bungalow was perfect for our vacation with two kids. The space was generous, and the direct garden access meant the children could play safely while we relaxed on the deck.\"",
+                author: "The Mehta Family, Delhi"
+            },
+            {
+                text: "\"As a solo traveler, the Forest View Cottage provided the perfect retreat. Cozy yet spacious enough, with stunning views that made my morning meditation sessions truly special.\"",
+                author: "Priya, Bangalore"
+            }
+        ];
+        
+        let currentTestimonial = 0;
+        const testimonialElement = document.querySelector('.testimonial-slide');
+        
+        function changeTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            testimonialElement.style.opacity = 0;
+            
+            setTimeout(() => {
+                testimonialElement.innerHTML = `
+                    <p class="testimonial-text">${testimonials[currentTestimonial].text}</p>
+                    <p class="testimonial-author">- ${testimonials[currentTestimonial].author}</p>
+                `;
+                testimonialElement.style.opacity = 1;
+            }, 500);
+        }
+        
+        // Change testimonial every 5 seconds
+        setInterval(changeTestimonial, 5000);
+    </script>
+    <div class="floating-contact">
+    <a href="tel:+919823099025" class="contact-btn call-btn" title="Call Us">
+        <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://wa.me/919823099025" class="contact-btn whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+</body>
+</html>
