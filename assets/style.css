@@ -1,0 +1,65 @@
+/* Global Enhancements for Aranya Nature Stay */
+:root {
+  --elev-1: 0 6px 18px rgba(0,0,0,.08);
+  --elev-2: 0 12px 30px rgba(0,0,0,.12);
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+}
+
+/* Utilities */
+.reveal { opacity: 0; transform: translateY(24px); will-change: transform, opacity; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); transition: opacity .8s ease, transform .8s ease; }
+
+.fade-up { opacity: 0; transform: translateY(16px); }
+.fade-up.is-visible { opacity: 1; transform: translateY(0); transition: opacity .7s ease, transform .7s ease; }
+
+.scale-in { opacity: 0; transform: scale(.96); }
+.scale-in.is-visible { opacity: 1; transform: scale(1); transition: opacity .6s ease, transform .6s ease; }
+
+.blur-in { filter: blur(8px); opacity: 0; }
+.blur-in.is-visible { filter: blur(0); opacity: 1; transition: filter .8s ease, opacity .8s ease; }
+
+.delay-1 { transition-delay: .05s; }
+.delay-2 { transition-delay: .1s; }
+.delay-3 { transition-delay: .15s; }
+.delay-4 { transition-delay: .2s; }
+
+/* Header glass polish (non-breaking) */
+header { backdrop-filter: saturate(150%) blur(6px); -webkit-backdrop-filter: saturate(150%) blur(6px); }
+
+/* Buttons micro-interactions */
+.btn { position: relative; overflow: hidden; }
+.btn::after { content: ""; position: absolute; inset: 0; background: radial-gradient(120px 120px at var(--x,50%) var(--y,50%), rgba(255,255,255,.25), transparent 40%); opacity: 0; transition: opacity .25s ease; }
+.btn:hover::after { opacity: 1; }
+
+/* Cards hover lift (rooms, gallery items) */
+.room-card, .gallery-item, .contact-form { border-radius: var(--radius-md); box-shadow: var(--elev-1); transition: transform .35s ease, box-shadow .35s ease; }
+.room-card:hover, .gallery-item:hover, .contact-form:hover { transform: translateY(-6px); box-shadow: var(--elev-2); }
+
+/* Section title accent underline animation */
+.section-title h2 { position: relative; }
+.section-title h2::after { content: ""; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 0; height: 3px; background: var(--secondary, #a38b5b); transition: width .5s ease; }
+.section-title h2.is-visible::after { width: 90px; }
+
+/* Parallax-ready hero overlay */
+.hero { position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.45)); pointer-events: none; }
+.hero .hero-content { position: relative; z-index: 1; }
+
+/* Floating contact subtle bounce */
+.floating-contact .contact-btn { animation: floatPulse 3.2s ease-in-out infinite; }
+.floating-contact .contact-btn:nth-child(2) { animation-delay: .6s; }
+@keyframes floatPulse { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+
+/* Back to top */
+#backToTop { position: fixed; right: 20px; bottom: 20px; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--primary, #2c5e1a); color: #fff; box-shadow: var(--elev-1); cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .3s ease, transform .3s ease, visibility 0s .3s; z-index: 10001; }
+#backToTop.is-visible { opacity: 1; visibility: visible; transform: translateY(0); transition: opacity .3s ease, transform .3s ease, visibility 0s; }
+
+/* Improved form focus */
+.form-control { transition: border-color .25s ease, box-shadow .25s ease; }
+.form-control:focus { box-shadow: 0 0 0 4px rgba(44,94,26,.12); }
+
+/* Footer link hover lift */
+.footer-links a { transition: color .25s ease, transform .25s ease; }
+.footer-links a:hover { transform: translateX(4px); }
