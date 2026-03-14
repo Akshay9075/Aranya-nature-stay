@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aranya Nature Stay - Experience the serenity of nature in luxury accommodations surrounded by wilderness">
+    <meta name="keywords" content="Aranya, nature stay, eco resort, wildlife resort, luxury cabins, forest stay">
+    <meta name="author" content="Aranya Nature Stay">
+    <title>Aranya Nature Stay - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c5e1a;
+            --secondary: #a38b5b;
+            --light: #f5f5f5;
+            --dark: #1a1a1a;
+            --accent: #8e7cc3;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--primary);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+
+        }
+        
+        .btn:hover {
+            background: #3a7a23;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: #b89d69;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.40);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            border-radius: 100%;        }
+        
+        .logo-text {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-left: 10px;
+        }
+        
+        .logo-subtext {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #d17910;
+            display: block;
+            margin-top: -5px;
+        }
+        
+        .nav-menu {
+            display: flex;
+        }
+        
+        .nav-menu li {
+            margin: 0 12px;
+        }
+        
+        .nav-menu a {
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 15px;
+            position: relative;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://Images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* About */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-img {
+    flex: 0.5; /* reduced from 0.7 to 0.4 */
+    max-width: 400px; /* set a maximum width */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+        
+        /* Rooms */
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .room-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .room-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .room-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .room-card:hover .room-img img {
+            transform: scale(1.1);
+        }
+        
+        .room-info {
+            padding: 20px;
+        }
+        
+        .room-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .room-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .room-price {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        /* Safari Gates */
+        .safari-gates {
+            background: linear-gradient(120deg, #fffdf7 0%, #f6fbf3 100%);
+        }
+
+        .safari-wrap {
+            background: #fff;
+            border-radius: 18px;
+            padding: 34px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(163, 139, 91, 0.25);
+        }
+
+        .safari-heading {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .safari-heading h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .safari-heading p {
+            color: #666;
+        }
+
+        .safari-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 22px;
+        }
+
+        .safari-zone {
+            background: #fffef8;
+            border: 1px solid rgba(209, 121, 16, 0.22);
+            border-radius: 14px;
+            padding: 22px;
+            transition: var(--transition);
+        }
+
+        .safari-zone:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .safari-zone h4 {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #d17910;
+            margin-bottom: 14px;
+            font-size: 1.18rem;
+        }
+
+        .safari-zone ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .safari-zone li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(44, 94, 26, 0.2);
+            color: #2f2f2f;
+            font-weight: 600;
+        }
+
+        .safari-zone li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .safari-zone .distance {
+            background: rgba(44, 94, 26, 0.1);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.86rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .activities {
+            padding: 0;
+            background: linear-gradient(180deg, #325020 0 132px, #f7f1d1 132px 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .activities::before,
+        .activities::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(10px);
+            opacity: 0.28;
+        }
+
+        .activities::before {
+            width: 220px;
+            height: 220px;
+            background: rgba(209, 121, 16, 0.22);
+            top: 102px;
+            left: -70px;
+        }
+
+        .activities::after {
+            width: 260px;
+            height: 260px;
+            background: rgba(44, 94, 26, 0.12);
+            right: -90px;
+            bottom: 30px;
+        }
+
+        .activities-header::after {
+            content: '';
+            display: block;
+            width: 92px;
+            height: 3px;
+            margin: 14px auto 0;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(209, 121, 16, 0.2), #d9b46b, rgba(209, 121, 16, 0.2));
+        }
+
+        .activities-header {
+            text-align: center;
+            padding: 26px 20px 32px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .activities-header h2 {
+            color: #f9f4e5;
+            font-size: 3.3rem;
+            font-weight: 400;
+            margin: 0;
+            letter-spacing: 1px;
+            text-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+        }
+
+        .activities-body {
+            padding: 38px 0 56px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .activities-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px 40px;
+            align-items: flex-start;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .activity-card {
+            text-align: center;
+            padding: 10px 8px 16px;
+            border-radius: 22px;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+            flex: 0 1 250px;
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.32);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .activity-card h3 {
+            color: #1c2116;
+            font-size: 1.15rem;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .activity-image {
+            width: 100%;
+            max-width: 210px;
+            aspect-ratio: 1 / 1;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 4px solid #fff;
+            border-radius: 8px;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+            background: #fff;
+            position: relative;
+        }
+
+        .activity-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.12));
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        .activity-card:hover .activity-image::after {
+            opacity: 1;
+        }
+
+        .activity-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.45s ease, filter 0.45s ease;
+        }
+
+        .activity-card:hover .activity-image img {
+            transform: scale(1.08);
+            filter: saturate(1.08) contrast(1.02);
+        }
+
+        .activity-safari img {
+            object-position: center 28%;
+        }
+
+        .activity-lake img {
+            object-position: center center;
+        }
+
+        .activity-walk img {
+            object-position: center center;
+        }
+
+        .activity-boating img {
+            object-position: center 60%;
+        }
+        
+        #gallery {
+            background: linear-gradient(120deg, #fffdf7 0%, #eef5e7 100%);
+        }
+
+        #gallery .section-title p {
+            color: #61705c;
+        }
+
+        #gallery .btn {
+            background: #d17910;
+            box-shadow: 0 8px 20px rgba(209, 121, 16, 0.18);
+        }
+
+        #gallery .btn:hover {
+            background: #b9690f;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 18px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.09);
+            border: 1px solid rgba(163, 139, 91, 0.18);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(44, 94, 26, 0.08), rgba(26, 26, 26, 0.42));
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(rgba(26, 38, 19, 0.82), rgba(32, 29, 17, 0.76)), url('https://Images.unsplash.com/photo-1501785888040-7cefece4ab5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .testimonials h2 {
+            color: #fff;
+        }
+        
+        .testimonial-slide {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #f1d38c;
+        }
+
+        #contact {
+            background: linear-gradient(120deg, #f8f5e8 0%, #eef4e8 100%) !important;
+        }
+
+        #contact .section-title p {
+            color: #62725d;
+        }
+        
+        /* Contact */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(163, 139, 91, 0.18);
+        }
+
+        .contact-item h4 {
+            color: #2b4d1c;
+        }
+
+        .contact-item p {
+            color: #566351;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+        
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            transition: var(--transition);
+            color: #ccc;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background: #fff;
+                flex-direction: column;
+                padding: 100px 20px 0;
+                transition: var(--transition);
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .activities-header h2 {
+                font-size: 2.4rem;
+            }
+
+            .activities-grid {
+                gap: 24px 24px;
+            }
+
+            .activity-card {
+                flex: 0 1 210px;
+                max-width: 240px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+
+            .activities {
+                background: linear-gradient(180deg, #1a2613 0 108px, #f7f1d1 108px 100%);
+            }
+
+            .activities-body {
+                padding: 34px 0 40px;
+            }
+
+            .activities-grid {
+                gap: 20px;
+            }
+
+            .activity-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+                padding: 8px 0 14px;
+            }
+
+            .activity-image {
+                max-width: 230px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10000;
+}
+
+.contact-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.call-btn {
+    background-color: skyblue; /* Green shade or your primary color */
+}
+
+.whatsapp-btn {
+    background: #25d366; /* WhatsApp green */
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+    <!-- Logo Image -->
+    <img src="Image/aranya1.png" alt="Aranya Nature Stay Logo" style="height:100px; width:auto;opacity: 2;">
+    
+    <!-- Logo Text (Optional) -->
+  <!--   <div class="logo-text">
+        Aranya <span class="logo-subtext">NATURE STAY</span>
+    </div> -->
+</a>
+            
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" style="color: black;">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="rooms.html">Our Rooms</a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="booking.html" class="btn" style="margin-top: -10px;">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>𝑬𝒙𝒑𝒆𝒓𝒊𝒆𝒏𝒄𝒆 𝑼𝒏𝒎𝒂𝒕𝒄𝒉𝒆𝒅 𝑳𝒖𝒙𝒖𝒓𝒚 𝒂𝒕 <span style="color: #d17910;">𝑨𝒓𝒂𝒏𝒚𝒂 𝑵𝒂𝒕𝒖𝒓𝒆 𝑺𝒕𝒂𝒚</span></h1>
+            <p>Experience the wild heart of <span style="color: #d21414;">𝐓𝐚𝐝𝐨𝐛𝐚</span> at Aranya Nature Stay, where luxury meets the untamed jungle.</p>
+            <a href="booking.html" class="btn">Book Your Stay</a>
+            <a href="rooms.html" class="btn btn-outline" style="margin-left: 15px; border-color: #d17910;color: white;">Explore Rooms</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="background: linear-gradient(120deg, #f5f5f5 60%, #fffbe6 100%); padding: 70px 0;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>
+                    <span style="color: #d17910; font-weight: 700;">About</span> Aranya
+                </h2>
+                <p style="font-size: 1.15rem; color: #555; max-width: 600px; margin: 0 auto;">
+                    Immerse yourself in the beauty of nature while enjoying modern comforts
+                </p>
+            </div>
+            
+            <div class="about-content" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-top: 40px;">
+                <div class="about-img scale-in" style="flex: 1 1 350px; min-width: 320px; max-width: 480px; box-shadow: 0 8px 32px rgba(0,0,0,0.10); border-radius: 18px; overflow: hidden; position: relative;">
+                    <img src="Image/about.jpeg" alt="Aranya Nature Stay" style="width: 100%; display: block; border-radius: 18px; object-fit: cover; min-height: 320px;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, rgba(209,121,16,0.85) 0%, rgba(255,255,255,0) 100%); height: 60px; border-radius: 0 0 18px 18px;"></div>
+                </div>
+                <div class="about-text fade-up" style="flex: 2 1 400px; min-width: 320px; padding: 0 10px;">
+                    <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 18px; color: #222;">
+                        Welcome to <span style="color: #d17910;">Aranya Nature Stay</span>
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin: 0 0 22px 0;">
+                        <li style="margin-bottom: 14px; display: flex; align-items: flex-start;">
+                            <span style="color: #d17910; font-size: 1.2em; margin-right: 10px;"><i class="fas fa-leaf"></i></span>
+                            <span>Nestled amidst lush greenery and pristine wilderness, Aranya offers a unique opportunity to reconnect with nature without compromising on comfort. Our eco-friendly stay is designed to provide a tranquil escape from the hustle and bustle of city life.</span>
+                        </li>
+                        <li style="margin-bottom: 14px; display: flex; align-items: flex-start;">
+                            <span style="color: #d17910; font-size: 1.2em; margin-right: 10px;"><i class="fas fa-spa"></i></span>
+                            <span>Thoughtfully designed accommodations, personalized service, and a deep respect for the environment create experiences that rejuvenate your mind, body, and soul.</span>
+                        </li>
+                        <li style="margin-bottom: 14px; display: flex; align-items: flex-start;">
+                            <span style="color: #d17910; font-size: 1.2em; margin-right: 10px;"><i class="fas fa-hiking"></i></span>
+                            <span>Whether you're seeking adventure, relaxation, or simply a digital detox, Aranya Nature Stay offers the perfect setting for your next getaway.</span>
+                        </li>
+                    </ul>
+                    <a href="about.html" class="btn" style="margin-top: 10px; background: #d17910; color: #fff; border: none; box-shadow: 0 4px 16px rgba(209,121,16,0.10);">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" style="background: linear-gradient(120deg, #f5f5f5 60%, #fffbe6 100%); padding: 70px 0;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>
+                    <span style="color: #d17910; font-weight: 700;">Our</span> Accommodations
+                </h2>
+                <p style="font-size: 1.15rem; color: #555; max-width: 600px; margin: 0 auto;">
+                    Luxurious rooms designed to harmonize with nature
+                </p>
+            </div>
+            
+            <div class="rooms-grid" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; margin-top: 40px;">
+                <!-- Room Card 1 -->
+                <div class="room-card scale-in" style="background: #fff; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.10); overflow: hidden; flex: 1 1 320px; max-width: 350px; min-width: 280px; display: flex; flex-direction: column; transition: transform .35s, box-shadow .35s;">
+                    <div class="room-img" style="height: 220px; overflow: hidden;">
+                        <img src="Image/room1.jpeg" alt="Forest View Cottage" style="width: 100%; height: 100%; object-fit: cover; transition: transform .4s;">
+                    </div>
+                    <div class="room-info" style="padding: 24px 20px 20px 20px; flex: 1;">
+                        <h3 style="font-size: 1.35rem; font-weight: 700; color: #222; margin-bottom: 10px;">Deluxe Rooms</h3>
+                        <p style="color: #666; font-size: 1rem; margin-bottom: 18px;">Cozy cottage with panoramic views of the surrounding wilderness</p>
+                        <div class="room-features" style="display: flex; gap: 10px; margin-bottom: 12px; color: #d17910; font-size: 1.1em;">
+                            <span title="King Bed"><i class="fas fa-bed"></i></span>
+                            <span title="Private Balcony"><i class="fas fa-umbrella-beach"></i></span>
+                            <span title="AC"><i class="fas fa-snowflake"></i></span>
+                        </div>
+                        <div class="room-price" style="font-weight: 600; color: #d17910; font-size: 1.1rem; margin-bottom: 10px;">From ₹5,000/night</div>
+                        <a href="rooms.html" class="btn btn-outline" style="margin-top: 10px; border-color: #d17910; color: #d17910;">View Details</a>
+                    </div>
+                </div>
+                <!-- Room Card 2 -->
+                <div class="room-card scale-in" style="background: #fff; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.10); overflow: hidden; flex: 1 1 320px; max-width: 350px; min-width: 280px; display: flex; flex-direction: column; transition: transform .35s, box-shadow .35s;">
+                    <div class="room-img" style="height: 220px; overflow: hidden;">
+                        <img src="Image/room2.jpeg" alt="Treehouse Villa" style="width: 100%; height: 100%; object-fit: cover; transition: transform .4s;">
+                    </div>
+                    <div class="room-info" style="padding: 24px 20px 20px 20px; flex: 1;">
+                        <h3 style="font-size: 1.35rem; font-weight: 700; color: #222; margin-bottom: 10px;">Deluxe Rooms</h3>
+                        <p style="color: #666; font-size: 1rem; margin-bottom: 18px;">Elevated luxury amidst the trees with modern amenities</p>
+                        <div class="room-features" style="display: flex; gap: 10px; margin-bottom: 12px; color: #d17910; font-size: 1.1em;">
+                            <span title="Queen Bed"><i class="fas fa-bed"></i></span>
+                            <span title="Treehouse"><i class="fas fa-tree"></i></span>
+                            <span title="WiFi"><i class="fas fa-wifi"></i></span>
+                        </div>
+                        <div class="room-price" style="font-weight: 600; color: #d17910; font-size: 1.1rem; margin-bottom: 10px;">From ₹5,000/night</div>
+                        <a href="rooms.html" class="btn btn-outline" style="margin-top: 10px; border-color: #d17910; color: #d17910;">View Details</a>
+                    </div>
+                </div>
+                <!-- Room Card 3 -->
+                <div class="room-card scale-in" style="background: #fff; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.10); overflow: hidden; flex: 1 1 320px; max-width: 350px; min-width: 280px; display: flex; flex-direction: column; transition: transform .35s, box-shadow .35s;">
+                    <div class="room-img" style="height: 220px; overflow: hidden;">
+                        <img src="Image/room3.jpeg" alt="Wilderness Suite" style="width: 100%; height: 100%; object-fit: cover; transition: transform .4s;">
+                    </div>
+                    <div class="room-info" style="padding: 24px 20px 20px 20px; flex: 1;">
+                        <h3 style="font-size: 1.35rem; font-weight: 700; color: #222; margin-bottom: 10px;">Deluxe Rooms</h3>
+                        <p style="color: #666; font-size: 1rem; margin-bottom: 18px;">Spacious suite with king size bed and forest views</p>
+                        <div class="room-features" style="display: flex; gap: 10px; margin-bottom: 12px; color: #d17910; font-size: 1.1em;">
+                            <span title="King Bed"><i class="fas fa-bed"></i></span>
+                            <span title="Bathtub"><i class="fas fa-bath"></i></span>
+                            <span title="Breakfast Included"><i class="fas fa-coffee"></i></span>
+                        </div>
+                        <div class="room-price" style="font-weight: 600; color: #d17910; font-size: 1.1rem; margin-bottom: 10px;">From ₹5,000/night</div>
+                        <a href="rooms.html" class="btn btn-outline" style="margin-top: 10px; border-color: #d17910; color: #d17910;">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="rooms.html" class="btn" style="background: #d17910; color: #fff; border: none; box-shadow: 0 4px 16px rgba(209,121,16,0.10); font-weight: 600; font-size: 1.1rem;">View All Rooms</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safari Gates Section -->
+    <section id="safari-gates" class="safari-gates">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2><span style="color: #d17910; font-weight: 700;">Safari</span> Gates Near to Aaranya Nature Stay</h2>
+                <p>Plan your wildlife safari easily with nearby entry gates and distances.</p>
+            </div>
+
+            <div class="safari-wrap reveal">
+                <div class="safari-grid">
+                    <div class="safari-zone fade-up">
+                        <h4><i class="fas fa-map-marker-alt"></i> Kolara Zone</h4>
+                        <ul>
+                            <li><span>Sirkada Gate</span><span class="distance">1 KM</span></li>
+                            <li><span>Belara Gate</span><span class="distance">8 KM</span></li>
+                            <li><span>Palasgaon Gate</span><span class="distance">6 KM</span></li>
+                            <li><span>Madnapur Gate</span><span class="distance">12 KM</span></li>
+                            <li><span>Kolara Gate</span><span class="distance">17 KM</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="safari-zone fade-up delay-1">
+                        <h4><i class="fas fa-route"></i> Pangadi / Zari Zone</h4>
+                        <ul>
+                            <li><span>Pangadi Gate</span><span class="distance">17 KM</span></li>
+                            <li><span>Somnath Gate</span><span class="distance">35 KM</span></li>
+                            <li><span>Keslaghat Gate</span><span class="distance">55 KM</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="activities">
+        <div class="activities-header">
+            <h2>Activities</h2>
+        </div>
+
+        <div class="container activities-body">
+            <div class="activities-grid">
+                <div class="activity-card activity-safari fade-in">
+                    <h3 style="color: #d17910;">Tiger Safari</h3>
+                    <div class="activity-image">
+                        <img src="Image/safari.jpg" alt="Tiger Safari">
+                    </div>
+                </div>
+
+                <div class="activity-card activity-lake fade-in">
+                    <h3 style="color: #d17910;">Lake Visit</h3>
+                    <div class="activity-image">
+                        <img src="Image/lake.webp" alt="Lake Visit">
+                    </div>
+                </div>
+
+                <div class="activity-card activity-walk fade-in">
+                    <h3 style="color: #d17910;">Jungle Walk</h3>
+                    <div class="activity-image">
+                        <img src="Image/walk1.jpeg" alt="Jungle Walk">
+                    </div>
+                </div>
+
+                <!-- <div class="activity-card activity-boating fade-in">
+                    <h3>Boating</h3>
+                    <div class="activity-image">
+                        <img src="Image/gallery.jpeg" alt="Boating">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Photo Gallery</h2>
+                <p>Glimpses of the unforgettable experiences that await you at Aranya</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="Image/tadoba1.webp" alt="Nature Walk">
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <img src="Image/walk.jpeg" alt="Resort Exterior">
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <img src="Image/hotel.jpeg" alt="Cabin Interior">
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <img src="Image/hotel1.jpeg" alt="Sunset View">
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="gallery.html" class="btn">View More Photos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Guest Experiences</h2>
+                <p>What our guests say about their stay at Aranya</p>
+            </div>
+            
+            <div class="testimonial-slide">
+                <p class="testimonial-text">"Aranya Nature Stay was exactly what we needed - a perfect escape into nature without sacrificing comfort. The treehouse villa was incredible, and the sounds of the forest at night were magical."</p>
+                <p class="testimonial-author">- Priya Sharma, Mumbai</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background: #f5f5f5;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for reservations and inquiries</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>NATIONAL PARK, TADOBA ANDHARI,<br> CHIMUR MUL ROAD, Sirkada,<br>Maharashtra 441223</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 98230 99025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>aranyanaturestay@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in">
+                    <h3 style="margin-bottom: 20px; text-align: center;">Send us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4><span style="color: #d17910;">Aranya</span> Nature Stay</h4>
+                    <p>Experience the perfect harmony of luxury and nature at our eco-friendly retreat nestled in the wilderness.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Our Rooms</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> NATIONAL PARK, TADOBA ANDHARI, CHIMUR MUL ROAD, Sirkada, Maharashtra 441223</li>
+                        <li><i class="fas fa-phone"></i> +91 98230 99025</li>
+                        <li><i class="fas fa-envelope"></i> aranyanaturestay@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and special offers.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Aranya Nature Stay. All Rights Reserved. Design By <a href="https://a2zithub.org/" style="text-decoration:none; color:skyblue;">A2Z IT HUB</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = "10px 0";
+                header.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.1)";
+            } else {
+                header.style.padding = "15px 0";
+                header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileToggle.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Fade-in Animation on Scroll
+        function checkFade() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                
+                if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+        
+        // Form Submission
+        const contactForm = document.querySelector('.contact-form form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        }
+        
+        // Testimonial Carousel (simplified version)
+        const testimonials = [
+            {
+                text: "\"Aranya Nature Stay was exactly what we needed - a perfect escape into nature without sacrificing comfort. The treehouse villa was incredible, and the sounds of the forest at night were magical.\"",
+                author: "Priya Sharma, Mumbai"
+            },
+            {
+                text: "\"The perfect blend of adventure and relaxation. We enjoyed the nature walks during the day and the cozy bonfires at night. The staff went above and beyond to make our stay memorable.\"",
+                author: "Rahul Kapoor, Delhi"
+            },
+            {
+                text: "\"An amazing eco-friendly resort that truly respects its natural surroundings. We loved how sustainability was integrated into every aspect of our stay without compromising on luxury.\"",
+                author: "Meera Patel, Bangalore"
+            }
+        ];
+        
+        let currentTestimonial = 0;
+        const testimonialElement = document.querySelector('.testimonial-slide');
+        
+        function changeTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            testimonialElement.style.opacity = 0;
+            
+            setTimeout(() => {
+                testimonialElement.innerHTML = `
+                    <p class="testimonial-text">${testimonials[currentTestimonial].text}</p>
+                    <p class="testimonial-author">- ${testimonials[currentTestimonial].author}</p>
+                `;
+                testimonialElement.style.opacity = 1;
+            }, 500);
+        }
+        
+        // Change testimonial every 5 seconds
+        setInterval(changeTestimonial, 5000);
+    </script>
+    <div class="floating-contact">
+    <a href="tel:+919823099025" class="contact-btn call-btn" title="Call Us">
+        <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://wa.me/919823099025" class="contact-btn whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
