@@ -97,16 +97,13 @@ h2 {
 </div>
 
 <script>
-// Get URL data
-const params = new URLSearchParams(window.location.search);
-
-document.getElementById("name").innerText = params.get("name") || "-";
-document.getElementById("mobile").innerText = params.get("mobile") || "-";
-document.getElementById("email").innerText = params.get("email") || "-";
-document.getElementById("checkin").innerText = params.get("checkin") || "-";
-document.getElementById("checkout").innerText = params.get("checkout") || "-";
-document.getElementById("adults").innerText = params.get("adults") || "-";
-document.getElementById("children").innerText = params.get("children") || "-";
+document.getElementById("name").innerText = localStorage.getItem("name") || "-";
+document.getElementById("mobile").innerText = localStorage.getItem("mobile") || "-";
+document.getElementById("email").innerText = localStorage.getItem("email") || "-";
+document.getElementById("checkin").innerText = localStorage.getItem("checkin") || "-";
+document.getElementById("checkout").innerText = localStorage.getItem("checkout") || "-";
+document.getElementById("adults").innerText = localStorage.getItem("adults") || "-";
+document.getElementById("children").innerText = localStorage.getItem("children") || "-";
 </script>
 
 </body>
