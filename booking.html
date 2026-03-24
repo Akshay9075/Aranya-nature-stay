@@ -893,7 +893,7 @@
     </form> -->
 
 
-    <form id="bookingForm" action="https://formsubmit.co/kurhepatil012@gmail.com" method="GET">
+    <form id="bookingForm" action="https://formsubmit.co/kurhepatil012@gmail.com" method="POST">
         <div class="form-section">
             <h3>When would you like to stay?</h3>
             <div class="form-row">
@@ -963,6 +963,19 @@
 
         <div class="form-actions">
             <div></div>
+			<script>
+document.getElementById("bookingForm").addEventListener("submit", function(){
+
+    localStorage.setItem("name", document.querySelector("[name='name']").value);
+    localStorage.setItem("mobile", document.querySelector("[name='mobile']").value);
+    localStorage.setItem("email", document.querySelector("[name='email']").value);
+    localStorage.setItem("checkin", document.querySelector("[name='checkin']").value);
+    localStorage.setItem("checkout", document.querySelector("[name='checkout']").value);
+    localStorage.setItem("adults", document.querySelector("[name='adults']").value);
+    localStorage.setItem("children", document.querySelector("[name='children']").value);
+
+});
+</script>
             <button type="submit" class="btn btn-success">Book</button>
         </div>
     </form>
