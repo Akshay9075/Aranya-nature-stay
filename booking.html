@@ -899,16 +899,16 @@
             <div class="form-row">
                 <div class="form-group">
                     <label>Enter Your Name </label>
-                    <input type="text" name="name" class="form-control" pattern="[A-Za-z ]{3,}" required>
+                    <input type="text" id="name" name="name" class="form-control" pattern="[A-Za-z ]{3,}" required>
                 </div>
                 <div class="form-group">
                     <label>Enter Mobile Number</label>
-                    <input type="tel" name="mobile" class="form-control" pattern="[6-9]{1}[0-9]{9}"
+                    <input type="tel" id="mobile" name="mobile" class="form-control" pattern="[6-9]{1}[0-9]{9}"
                 maxlength="10"  required>
                 </div>
                 <div class="form-group">
                     <label>Enter Your Email</label>
-                    <input type="email" name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  required>
+                    <input type="email" id="email" name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  required>
                 </div>
             </div>
             <div class="form-row">
@@ -959,6 +959,7 @@
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_subject" value="New Booking Request">
 					<input type="hidden" name="_next" value="https://akshay9075.github.io/Aranya-nature-stay/thanks.html">
+			<input type="hidden" name="_autoresponse" value="Thank you for booking!">
 
         <div class="form-actions">
             <div></div>
